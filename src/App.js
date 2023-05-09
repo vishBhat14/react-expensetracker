@@ -27,37 +27,37 @@ function App() {
       loactionOfexpen:'market'
     },
   ];
-  const expenseItems = [];
+  // const expenseItems = [];
 
-  for (let i = 0; i < expenses.length; i++) {
+  // for (let i = 0; i < expenses.length; i++) {
    
-    expenseItems.push(
-      <ExpenseItem
+  //   expenseItems.push(
+  //     <ExpenseItem
       
-        title={expenses[i].title}
-        amount={expenses[i].amount}
-        date={expenses[i].date}
-        loactionOfexpen={expenses[i].loactionOfexpen}
-      ></ExpenseItem>
-    );
-  }
-
-  return (
-    <div>
-      <h2>Let's get started!</h2>
-      {expenseItems}
-    </div>
-  );
+  //       title={expenses[i].title}
+  //       amount={expenses[i].amount}
+  //       date={expenses[i].date}
+  //       loactionOfexpen={expenses[i].loactionOfexpen}
+  //     ></ExpenseItem>
+  //   );
+  // }
 
   // return (
   //   <div>
   //     <h2>Let's get started!</h2>
-  // <ExpenseItem title={expenses[0].title} amount={expenses[0].amount} date={expenses[0].date} loactionOfexpen={expenses[0].loactionOfexpen}></ExpenseItem>
-  // <ExpenseItem  title={expenses[1].title} amount={expenses[1].amount} date={expenses[1].date} loactionOfexpen={expenses[1].loactionOfexpen}></ExpenseItem>
-  // <ExpenseItem  title={expenses[2].title} amount={expenses[2].amount} date={expenses[2].date} loactionOfexpen={expenses[2].loactionOfexpen}></ExpenseItem>
-  // <ExpenseItem  title={expenses[3].title} amount={expenses[3].amount} date={expenses[3].date} loactionOfexpen={expenses[3].loactionOfexpen}></ExpenseItem>
+  //     {expenseItems}
   //   </div>
   // );
+
+  return (
+    <div>
+      <h2>Let's get started!</h2>
+  <ExpenseItem title={expenses[0].title} amount={expenses[0].amount} date={expenses[0].date} loactionOfexpen={expenses[0].loactionOfexpen}></ExpenseItem>
+  <ExpenseItem  title={expenses[1].title} amount={expenses[1].amount} date={expenses[1].date} loactionOfexpen={expenses[1].loactionOfexpen}></ExpenseItem>
+  <ExpenseItem  title={expenses[2].title} amount={expenses[2].amount} date={expenses[2].date} loactionOfexpen={expenses[2].loactionOfexpen}></ExpenseItem>
+  <ExpenseItem  title={expenses[3].title} amount={expenses[3].amount} date={expenses[3].date} loactionOfexpen={expenses[3].loactionOfexpen}></ExpenseItem>
+    </div>
+  );
 }
 
 export default App;
