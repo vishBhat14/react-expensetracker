@@ -29,6 +29,11 @@ function App() {
       loactionOfexpen:'market'
     },
   ];
+
+  const addExpensehandler=(expense)=>{
+    console.log('in.js');
+    console.log(expense)
+  }
   // const expenseItems = [];
 
   // for (let i = 0; i < expenses.length; i++) {
@@ -53,7 +58,7 @@ function App() {
 
   return (
     <div>
-      <NewExpense></NewExpense>
+      <NewExpense onAddexpense={addExpensehandler}></NewExpense>
       <Expenses items={expenses}></Expenses>
 {/*      
   <ExpenseItem title={expenses[0].title} amount={expenses[0].amount} date={expenses[0].date} loactionOfexpen={expenses[0].loactionOfexpen}></ExpenseItem>
