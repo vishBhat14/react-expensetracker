@@ -3,7 +3,7 @@ import "./ExpenseItem.css";
 
 function ExpenseDetails(props) {
   return (
-    <div className='expense-item'>
+    <div >
       
       <div className='expense-item__description'>
        <h2>{props.title}, {props.loactionOfexpen}</h2> 
