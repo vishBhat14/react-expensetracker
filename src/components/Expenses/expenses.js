@@ -7,11 +7,15 @@ function Expenses(props){
     const[filteredYear, SetFilteredYear]=useState('2020');
     const filterChangeHandler=(selectedYear)=>{
         SetFilteredYear(selectedYear);
-    }
+    };
+
+    const filteredeExpenses=props.items.filter((expense)=>{
+        return expense.date.getFullYear().toString()===filteredYear
+    })
     return (
         <Card className='expenses'>
     <ExpensesFilter selected={filteredYear}  onChangeFilter={filterChangeHandler} />    
-    {props.items.map((expense)=> <ExpenseItem key={expense.id} title={expense.title} amount={expense.amount} date={expense.date} loactionOfexpen={expense.loactionOfexpen}/>)}   
+    {filteredeExpenses.map((expense)=> <ExpenseItem key={expense.id} title={expense.title} amount={expense.amount} date={expense.date} loactionOfexpen={expense.loactionOfexpen}/>)}   
   {/* <ExpenseItem title={props.items[0].title} amount={props.items[0].amount} date={props.items[0].date} loactionOfexpen={props.items[0].loactionOfexpen}></ExpenseItem>
   <ExpenseItem  title={props.items[1].title} amount={props.items[1].amount} date={props.items[1].date} loactionOfexpen={props.items[1].loactionOfexpen}></ExpenseItem>
   <ExpenseItem  title={props.items[2].title} amount={props.items[2].amount} date={props.items[2].date} loactionOfexpen={props.items[2].loactionOfexpen}></ExpenseItem>
