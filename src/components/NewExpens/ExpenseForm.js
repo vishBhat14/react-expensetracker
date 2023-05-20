@@ -43,6 +43,7 @@ return  ( <form onSubmit={submitHandler}>
         <label>Title</label>
         <input type='text' value={enteredTitle}  onChange={TitleChangeHandler}></input>
     </div>
+    
     <div className='new-expense__control'>
         <label>Amount</label>
         <input type='number' min='0.01' step='0.01' value={enteredAmount} onChange={amountChangeHandler}></input>
